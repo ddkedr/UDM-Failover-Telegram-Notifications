@@ -18,11 +18,11 @@ case "$(ubnt-device-info firmware || true)" in
   ;;
 esac
 
-rm -rf $DATA_DIR/UDMP-Failover-Telegram-Notifications
-mkdir $DATA_DIR/UDMP-Failover-Telegram-Notifications
+#rm -rf $DATA_DIR/UDMP-Failover-Telegram-Notifications
+#mkdir $DATA_DIR/UDMP-Failover-Telegram-Notifications
 
 on_boot_script="$DATA_DIR/on_boot.d/99-failover-telegram-notifications.sh"
-failover_notifications_script="$DATA_DIR/UDMP-Failover-Telegram-Notifications/failover-notifications.sh"
+failover_notifications_script="$DATA_DIR/nest/failover-notifications.sh"
 
 curl -sO https://raw.githubusercontent.com/fire1ce/UDM-Failover-Telegram-Notifications/main/99-failover-telegram-notifications.sh
 mv 99-failover-telegram-notifications.sh $on_boot_script
