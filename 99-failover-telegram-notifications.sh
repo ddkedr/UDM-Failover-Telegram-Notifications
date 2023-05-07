@@ -19,4 +19,4 @@ case "$(ubnt-device-info firmware || true)" in
 esac
 
 # Start the Script at boot
-nohup "$DATA_DIR/UDMP-Failover-Telegram-Notifications/failover-notifications.sh" >/tmp/output.log &
+nohup "$DATA_DIR/nest/failover-notifications.sh" >/tmp/output.log &
